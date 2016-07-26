@@ -9,14 +9,7 @@ sudo apt-get install -y \
     git \
     curl \
     openjdk-7-jre \
-    vim-nox python-pip \
-    python-software-properties \
-    software-properties-common
-
-# Install tmux
-sudo add-apt-repository -y ppa:pi-rho/dev
-sudo apt-get update
-sudo apt-get install -y tmux
+    vim-nox python-pip
 
 # Install python packages
 sudo pip install bernhard click flask tabulate

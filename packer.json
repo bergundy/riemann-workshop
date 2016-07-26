@@ -14,11 +14,6 @@
   "provisioners": [
     {
         "type": "file",
-        "source": ".tmux.conf",
-        "destination": "/home/ubuntu/"
-    },
-    {
-        "type": "file",
         "source": "install.sh",
         "destination": "/home/ubuntu/"
     },
