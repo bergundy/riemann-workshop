@@ -15,6 +15,7 @@
              :dev
              {:plugins [[jonase/eastwood "0.2.3"]
                         [lein-auto "0.1.2"]
+                        [lein-iclojure "1.2"]
                         [test2junit "1.2.1"]]}
              :junit
              {:injections [(test2junit.core/apply-junit-output-hook "target/tests")]}}
