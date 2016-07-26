@@ -18,7 +18,7 @@
     },
     {
         "type" : "shell",
-        "inline": "echo alias vi=vim >> ~/.bashrc"
+        "inline": "echo \"alias vi=vim\ncd riemann-workshop\" >> ~/.bashrc"
     },
     {
         "type" : "shell",
