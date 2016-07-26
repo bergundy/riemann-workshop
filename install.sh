@@ -23,8 +23,7 @@ sudo cp src/redis-cli src/redis-server /usr/local/bin
 cd -
 cat >> ~/.bashrc <<EOF
 alias vi=vim
-cd riemann-workshop
-git pull
+cd ~/riemann-workshop
 EOF
 
 # Download and extract riemann
