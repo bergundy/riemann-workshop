@@ -14,7 +14,7 @@
   "provisioners": [
     {
         "type" : "shell",
-        "inline": "sudo apt-key update && sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y wget build-essential git curl openjdk-7-jre vim-nox python-pip && sudo pip install bernhard"
+        "inline": "sudo apt-key update && sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y wget build-essential git curl openjdk-7-jre vim-nox python-pip && sudo pip install bernhard click"
     },
     {
         "type" : "shell",
