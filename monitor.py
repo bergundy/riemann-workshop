@@ -9,7 +9,7 @@ riemann = bernhard.Client()
 
 
 @contextmanager
-def monitor(service, attributes=None, success='success', failed='failed'):
+def monitor(service, attributes=None, success='passed', failed='failed'):
     start_time = time.time()
     try:
         yield
