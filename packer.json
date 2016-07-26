@@ -1,0 +1,32 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "eu-central-1",
+      "source_ami": "ami-1ac73275",
+      "instance_type": "t2.small",
+      "ssh_username": "ubuntu",
+      "ssh_timeout": "15m",
+      "ami_name": "riemann-workshop-{{isotime | clean_ami_name}}",
+      "iam_instance_profile": "packer"
+    }
+  ],
+  "provisioners": [
+    {
+        "type": "file",
+        "source": ".tmux.conf",
+        "destination": "/home/ubuntu/"
+    },
+    {
+        "type": "file",
+        "source": "install.sh",
+        "destination": "/home/ubuntu/"
+    },
+    {
+        "type" : "shell",
+        "scripts": [
+            "install.sh"
+        ]
+    }
+  ]
+}
