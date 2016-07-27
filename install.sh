@@ -12,7 +12,7 @@ sudo apt-get install -y \
     vim-nox python-pip
 
 # Install python packages
-sudo pip install bernhard click flask tabulate
+sudo pip install bernhard click flask tabulate redis
 
 # Install redis
 wget http://download.redis.io/redis-stable.tar.gz
