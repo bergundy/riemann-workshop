@@ -25,6 +25,12 @@ cat >> ~/.bashrc <<EOF
 alias vi=vim
 cd ~/riemann-workshop
 EOF
+cat >> ~/.vimrc <<EOF
+set tabstop=2
+set shiftwidth=2
+set ai
+set expandtab
+EOF
 
 # Download and extract riemann
 wget https://aphyr.com/riemann/riemann-0.2.11.tar.bz2
