@@ -1,6 +1,7 @@
 import tabulate
 import time
 import click
+import logging
 
 from flask import Flask, request
 from threading import Thread
@@ -49,6 +50,7 @@ def print_status_loop():
 
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.ERROR)
     t = Thread(target=print_status_loop, args=())
     t.daemon = True
     t.start()
