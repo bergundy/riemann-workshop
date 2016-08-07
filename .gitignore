@@ -1,3 +1,5 @@
 .*.sw[nop]
 target
 resources
+.lein*
+supervisord.log
