@@ -6,7 +6,8 @@
   [event]
   (condp = (:state event)
     "passed" "resolve"
-    "failed" "trigger"))
+    "failed" "trigger"
+    nil))
 
 (defn- incident-key
   [event]
@@ -26,10 +27,12 @@
 (defn post
   "POST to the PagerDuty events API."
   [event]
-  (client/post (str "http://localhost:5000/incidents/" (action event))
-               {:body (json/generate-string (format-event event))
-                :socket-timeout 5000
-                :conn-timeout 5000
-                :content-type :json
-                :accept :json
-                :throw-entire-message? true}))
+  (let [action (action event)]
+    (if action
+      (client/post (str "http://localhost:5000/incidents/" action)
+                   {:body (json/generate-string (format-event event))
+                    :socket-timeout 5000
+                    :conn-timeout 5000
+                    :content-type :json
+                    :accept :json
+                    :throw-entire-message? true}))))
