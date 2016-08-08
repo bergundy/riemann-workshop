@@ -18,4 +18,7 @@
                "undefined"
              )))))
 
-(streams prn)
+(streams
+  (moving-event-window 3
+    (smap test-state
+      post)))
