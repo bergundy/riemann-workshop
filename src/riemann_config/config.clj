@@ -13,4 +13,5 @@
 (def test-lte-0
   (make-test-fn #(<= (:metric %) 0)))
 
-(streams prn)
+(streams
+  (smap test-lte-0 post))
