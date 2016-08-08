@@ -10,4 +10,4 @@
                     "FATAL" "failed"
                     "undefined")))
 
-(streams prn)
+(streams (smap test-supervisor-state post))
