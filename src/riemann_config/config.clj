@@ -4,4 +4,6 @@
 (instrumentation {:enabled? false})
 (periodically-expire 2)
 
-(streams prn)
+(streams
+  (where (service "GET /")
+    post))
