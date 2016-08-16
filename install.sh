@@ -32,15 +32,15 @@ set ai
 set expandtab
 EOF
 
+# Install leiningen
+sudo wget -O /usr/local/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+sudo chmod a+x /usr/local/bin/lein
+
 # Download and extract riemann
 wget https://aphyr.com/riemann/riemann-0.2.11.tar.bz2
 tar xvfj riemann-0.2.11.tar.bz2
 
 # Init workshop
-git clone https://github.com/bergundy/riemann-workshop
-mv riemann-0.2.11/lib/riemann.jar riemann-workshop/resources
-sudo wget -O /usr/local/bin/lein https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-sudo chmod a+x /usr/local/bin/lein
-cd riemann-workshop
+mv riemann-0.2.11/lib/riemann.jar resources
+rm -rf riemann-0.2.11 riemann-0.2.11.tar.bz2
 lein test
-cd -
