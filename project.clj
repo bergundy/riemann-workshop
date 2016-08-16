@@ -4,9 +4,11 @@
   :license {:name "BSD"
             :url "?"}
   :min-lein-version "2.0.0"
-  :dependencies [[org.clojure/clojure "1.7.0"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [pjstadig/humane-test-output "0.7.1"]
-                 [test2junit "1.2.1"]]
+                 [test2junit "1.2.1"]
+                 [robert/hooke "1.3.0"]
+                 [riemann "0.2.11"]]
   :injections [(require 'pjstadig.humane-test-output)
                (pjstadig.humane-test-output/activate!)
                (require 'test2junit.core)]
